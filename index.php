@@ -7,7 +7,7 @@
     <link rel="icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-TileImage" content="mstile.png">
-    <title>Board Game Search</title>
+    <title>BoardRank</title>
 </head>
 <body>
     <form id="search">
@@ -17,6 +17,7 @@
     <div id="debug"></div>
     <div id="search_results">
         <p>Add To Homescreen For Offline Use: <a target="_blank" href="http://www.howtogeek.com/196087/how-to-add-websites-to-the-home-screen-on-any-smartphone-or-tablet/">Instructions</a></p>
+        <p>Use once via homescreen while online before using it offline.</p>
     </div>
     <script type="text/javascript" src="jzed.js"></script>
     <script type="text/javascript" src="main.js"></script>
