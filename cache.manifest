@@ -1,0 +1,11 @@
+﻿CACHE MANIFEST
+# 2015-02-21v2
+
+CACHE:
+index.html
+main.js
+jzed.js
+board_games.js
+
+NETWORK:
+*
