@@ -15,9 +15,11 @@
         <input type="submit" id="search_button" value="search">
     </form>
     <div id="debug"></div>
-    <div id="search_results"></div>
-    <script type="text/javascript" src="board_games.js"></script>
+    <div id="search_results">
+        <p>Add To Homescreen For Offline Use: <a href="http://www.howtogeek.com/196087/how-to-add-websites-to-the-home-screen-on-any-smartphone-or-tablet/">Instructions</a></p>
+    </div>
     <script type="text/javascript" src="jzed.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="board_games.js"></script>
 </body>
 </html>
