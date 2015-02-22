@@ -3,7 +3,7 @@ $boot(function(){
         search_query_el  = $id('query'),
         search_results_el = $id('search_results');
 
-    if (("standalone" in window.navigator) && !window.navigator.standalone) {
+    if (("standalone" in window.navigator) && window.navigator.standalone) {
         $html(search_results_el, '');
     }
     
