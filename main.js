@@ -1,11 +1,16 @@
 $boot(function(){
-    var search_button = $id('search_button'),
-        search_query  = $id('query');
+    var search_button_el = $id('search_button'),
+        search_query_el  = $id('query'),
+        search_results_el = $id('search_results');
+
+    if (("standalone" in window.navigator) && !window.navigator.standalone) {
+        $html(search_results_el, '');
+    }
     
-    $on(search_button, 'click', function(event) {
+    $on(search_button_el, 'click', function(event) {
         event.preventDefault();
        
-        var query = search_query.value,
+        var query = search_query_el.value,
             found_games = find_game_by_name(query, board_games);
 
         display_games(found_games);
@@ -14,15 +19,15 @@ $boot(function(){
 
 
 function display_games(found_games) {
-    var search_results_element = $id('search_results');
-    $html(search_results_element, '');
+    var search_results_el = $id('search_results');
+    $html(search_results_el, '');
     $each(found_games, function(game) {
         var game_div = $new('div', false, '');
         $append(game_div, $new('h2', false, game[0]));
         $append(game_div, $new('p', false, 'Rank: ' + game[1]));
         $append(game_div, $new('p', false, 'Geek Rating: ' + game[2]));
         $append(game_div, $new('p', false, 'Number of Voters: ' +  game[3]));
-        $append(search_results_element, game_div);
+        $append(search_results_el, game_div);
     });
 }
 
