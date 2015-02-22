@@ -1,11 +1,14 @@
 ﻿CACHE MANIFEST
-# 2015-02-22v1
+# 2015-02-22v2
 
 CACHE:
 index.php
 main.js
 jzed.js
 board_games.js
+apple-touch-icon.png
+favicon.ico
+mstile.png
 
 NETWORK:
 *

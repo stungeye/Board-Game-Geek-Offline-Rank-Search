@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="mstile.png">
     <title>Board Game Search</title>
 </head>
 <body>
