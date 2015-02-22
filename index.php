@@ -16,7 +16,7 @@
     </form>
     <div id="debug"></div>
     <div id="search_results">
-        <p>Add To Homescreen For Offline Use: <a href="http://www.howtogeek.com/196087/how-to-add-websites-to-the-home-screen-on-any-smartphone-or-tablet/">Instructions</a></p>
+        <p>Add To Homescreen For Offline Use: <a target="_blank" href="http://www.howtogeek.com/196087/how-to-add-websites-to-the-home-screen-on-any-smartphone-or-tablet/">Instructions</a></p>
     </div>
     <script type="text/javascript" src="jzed.js"></script>
     <script type="text/javascript" src="main.js"></script>
