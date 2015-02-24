@@ -1,4 +1,7 @@
+handleAppCache();
+
 $boot(function(){
+
     var search_form_el = $id('search_form'),
         search_query_el  = $id('query');
 
@@ -21,6 +24,19 @@ function remove_install_instructions() {
     $html($id('install_instructions'), '');
 }
 
+function handleAppCache() {
+  if (applicationCache == undefined) {
+    return;
+  }
+  
+  if (applicationCache.status == applicationCache.UPDATEREADY) {
+    applicationCache.swapCache();
+    location.reload();
+    return;
+  }
+  
+  applicationCache.addEventListener('updateready', handleAppCache, false);
+}
 
 function display_games(found_games) {
     var search_results_el = $id('search_results');
