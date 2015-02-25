@@ -5,8 +5,8 @@ $boot(function(){
     var search_form_el = $id('search_form'),
         search_query_el  = $id('query');
 
-    if (("standalone" in window.navigator) && window.navigator.standalone) {
-        remove_install_instructions();
+    if (!("standalone" in window.navigator) || (("standalone" in window.navigator) && !window.navigator.standalone)) {
+        show_install_instructions();
     }
     
     $on(search_form_el, 'submit', function(event) {
@@ -19,6 +19,10 @@ $boot(function(){
         display_games(found_games);
     });
 });
+
+function show_install_instructions() {
+    $toggle($id('install_instructions'), 'hidden');
+}
 
 function remove_install_instructions() {
     $html($id('install_instructions'), '');
@@ -39,11 +43,14 @@ function handleAppCache() {
 }
 
 function display_games(found_games) {
-    var search_results_el = $id('search_results');
+    var search_results_el = $id('search_results'),
+        games_ul_el = $new('ul', 'results', '');
+    
     $html(search_results_el, '');
-    var games_ul_el = $new('ul', 'results', '');
+    
     $style([games_ul_el, 'table-view']);
     $append(search_results_el, games_ul_el);
+    
     $each(found_games, function(game) {
         var game_li = $new('li', false, '');
         $style([game_li, 'table-view-cell']);

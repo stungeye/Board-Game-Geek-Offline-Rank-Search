@@ -7,7 +7,8 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-TileImage" content="mstile.png">
     <link rel="icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="ratchet.min.css">    
+    <link rel="stylesheet" href="ratchet.min.css">
+    <link rel="stylesheet" href="main.css">
     <title>BoardRank</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
     </div>
 
     <div class="content">
-        <div id="install_instructions">
+        <div id="install_instructions" class="hidden">
             <p class="content-padded"><a target="_blank" href="http://www.howtogeek.com/196087/how-to-add-websites-to-the-home-screen-on-any-smartphone-or-tablet/">Add to Homescreen for Offline use.</a> Use homescreen app once online before using it offline.</p>
         </div>
         <div id="debug"></div>
